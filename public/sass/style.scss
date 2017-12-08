@@ -1,0 +1,374 @@
+@charset "utf-8";
+
+//公共
+.warning{
+	color:red;
+}
+
+a{
+	text-decoration:none;
+}
+
+a:hover{
+	text-decoration:none;
+}
+
+.sure{
+	color:green; 
+}
+
+ul,nav{
+	padding:0;
+	margin:0 !important;
+}
+
+li{
+	list-style:none;
+}
+
+#linkuser{
+	text-decoration:none;
+	color:#000;
+}
+
+#container{
+	background:url('/images/bg.jpg') no-repeat center;
+	border:2px solid #000;
+	padding:20px;
+	width:1000px;
+	margin:20px auto 0;
+}
+
+// 注册
+p#judgment{
+	margin-top:10px;
+	background:#000;
+	width:120px;
+	height:40px;
+	overflow:hidden;
+	span{
+		float:left;
+		display: inline-block;
+		width:40px;
+		height:40px;
+		text-align: center;
+		color:#fff;
+		font:20px/40px "";
+	}
+	.tipcolor{
+		background:#00ff00;
+	}
+}
+
+#yzmcontain{
+	margin-top:10px;
+	display:inline-block;
+	width:100px;
+	height:40px;
+	text-align:center;
+	font:20px/40px "";
+	background:grey;
+	color:#fff;
+	vertical-align:middle;
+}
+
+.flash{
+	margin-left:5px;
+	cursor:pointer;
+}
+
+//菜单
+#main{
+	overflow:hidden;
+	width:1200px;
+	margin:0 auto;
+	height:640px;
+}
+.menu{
+	height:640px;
+	float:left;
+	width:100px;
+	background:#99ccff;
+	li{
+		text-align:center;
+		padding:0 10px;
+		width:100%;
+		height:40px;
+		font:16px/40px "";	
+		cursor: default;
+	}
+}
+
+//pageone
+.pageone{
+	height:100%;
+	.boxone{
+		height:550px;
+		ul{
+			overflow:hidden;
+		}
+		li{
+			margin-bottom:10px;
+			float:left;
+			margin-right:10px;
+			width:100px;
+			height:100px;
+		}
+		.desk{
+			margin-left:5px;
+			text-align: center;
+			padding-top:20px;
+			border:1px solid #000;
+			width:75px; 
+			height:70px;
+		}
+		span.click{
+			border:1px solid #000;
+			border-radius:50%;
+			display: inline-block;
+			margin-top:10px;
+			cursor: default;
+		}
+		.add{
+			text-align: center;
+			border:1px solid #000;
+			font:60px/100px "";
+			cursor: default;
+		}
+	}
+	width:1200 - 100px;
+	padding:20px 20px 0;
+	float:left;	
+}
+
+//pagethree
+.pagethree{
+	float:left;
+	width:1078px;
+	margin-left:20px;
+	margin-top:10px; 
+	.pagethree-title{
+		background:#fff8dc;
+		overflow:hidden;
+		border:1px solid #fff8dc;
+		border-radius:20px;
+		span{
+			float:right;
+			display: inline-block;
+			text-align: center;
+			width:100px;
+			height:80px;
+			font:16px/80px "";
+			color:#ffc5a5;
+			cursor:pointer;
+			a{
+				color:#ffc5a5;		
+			}
+		}
+		span.target{
+				color:#000;
+			}
+	}
+	@mixin spantype($type,$width,$textalign,$marginleft){
+		display: $type;
+		width:$width;
+		text-align: $textalign;
+		margin-left: $marginleft;
+	}
+	@mixin linktype($color,$marginleft,$type,$width){
+		overflow: hidden;
+		text-overflow:ellipsis;
+		white-space: nowrap;
+		color:$color;
+		margin-left:$marginleft;
+		display: $type;
+		width:$width;
+		text-align: center;
+	}
+	@mixin common(){
+		position:relative;
+		top:-10px;
+	}
+	.pagethree-dishlist{
+		li{
+			width:100%;
+			height:40px;
+			margin-top:20px;
+			border-bottom:1px dotted #000;
+		}
+		li.table-title-1{
+			span{
+				@include spantype(inline-block,200px,center,100px);
+				font-weight:700;
+			}
+			span.title1{
+				width:60px;
+				margin-left:0px;
+				position:relative;
+				left:10px;
+			}
+		}
+		li.table-title-2{
+			span{
+				font-weight:700;
+			}
+			span.title5{
+				@include spantype(inline-block,60px,center,20px);
+			}
+			span.title6{
+				@include spantype(inline-block,100px,center,30px);
+			}
+			span.title7{
+				@include spantype(inline-block,200px,center,90px);
+			}
+			span.title8,span.title9{
+				@include spantype(inline-block,50px,center,150px);
+			}
+		}
+		img{
+			width:40px;
+			height:40px;
+			margin-left:20px;
+			margin-top:-45px;
+		}
+		li.pagethree-all-hide{
+			span{
+				@include spantype(inline-block,200px,center,100px);
+				font:16px/40px "";
+				@include common();
+			}	
+			a{
+				@include linktype(#666,100px,inline-block,200px);
+				font:16px/40px "";
+			}
+		}
+		li.pagethree-self-hide{
+			span{
+				@include spantype(inline-block,100px,center,50px);
+				font:16px/40px "";
+				@include common();
+			}		
+			a.pagethree-describe{
+				@include linktype(#666,90px,inline-block,200px);
+				font:16px/40px "";
+			}
+			b{
+				@include linktype(#666,150px,inline-block,50px);
+				border:1px solid #000;
+				border-radius:5px;
+				text-align:center;
+				background:#f0f0f0;
+				cursor: pointer;
+				@include common();
+			}	
+			a.pagethree-change{
+				@extend b;
+			}
+			b:hover{
+				background:red;
+				color:#fff;
+			}
+		}
+	}
+}
+
+//dishdetail
+#dishdeatil-particular{
+	width:1000px;
+	margin:20px auto 0 ;
+	border-radius:5px;
+	border:3px solid #000;
+	padding:10px;
+	ul{
+		background:url('/images/bg.jpg') no-repeat center;
+	}
+	li{
+		font:16px/24px "";
+		margin-bottom: 10px;
+		border-bottom:1px dotted #666;
+	}
+	li:nth-child(5){
+		img{
+			width:300px;
+		}
+	}
+	#pic img{
+		width:300px;
+	}
+}
+
+//check
+#check-container{
+	tr.check-title{
+		font-weight: 700;
+	}
+	width:1000px;
+	margin:20px auto 0 ;
+	a{
+		color:#666;
+	}
+	a.submitting{
+		display: inline-block;
+		background:red;
+		color:#fff;
+		padding:10px;
+		border:1px solid red;
+		border-radius: 5px;
+		margin-left: 894px;
+	}
+	img{
+		width:100px;
+	}
+	input{
+		width:100px;
+	}
+}
+
+//deskdeatil
+@mixin border-click(){
+	display: inline-block;
+	padding:5px;
+	border:1px solid #000;
+	border-radius:5px;
+	background:red;
+	color:#fff;
+}
+
+.deskdeail-list{
+	font:16px/20px "";
+	@include border-click();
+}
+.custom-need{
+	li{
+		overflow: hidden;
+		p{
+			float:left;
+			width:300px;
+			text-align: center;
+		}
+		span{
+			float:left;
+			display: inline-block;
+			width:100px;
+		}
+		b{
+			float:left;
+			display: inline-block;
+			width:30px;
+			text-align: center;
+		}
+	}
+}
+.deskdeatil-allprice{
+	font:16px/24px "";
+	span{
+		color:red;
+	}
+}
+.deskdeatil-changestatus{
+	span{
+		@include border-click();
+		cursor: default;
+		margin-left:10px;
+	}
+}

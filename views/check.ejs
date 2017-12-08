@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><% title %></title>
+    <link rel='stylesheet' href='/bootstrap/css/bootstrap.css' />
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/bootstrap/js/jquery-1.11.0.js" type="text/javascript"></script>
+    <script src="/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/javascripts/require.js" data-main="/javascripts/main.js"></script>
+  </head>
+  <body>
+  	<%- include("./header",{title:"点菜单",isShow:false})%>
+  	<div id="check-container">
+  		<table class="table table-striped dish-menu">
+              <tr class="check-title">
+                    <td>菜名</td>
+                    <td>价格</td>
+                    <td>描述</td>
+                    <td>图片</td>
+                    <td>份数</td>
+              </tr>
+  			<tr class="hide">
+  				<td>菜名</td>
+  				<td>价格</td>
+  				<td><a href="/dishdeatil?status=1">描述</a></td>
+  				<td><img src="/images/bg.jpg"/></td>
+  				<td><input type="number" /></td>
+  			</tr>
+  		</table>
+          <a href="/deskdeail" class="submitting">确认所点菜品</a>
+  	</div>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/bootstrap/css/bootstrap.css' />
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/bootstrap/js/jquery-1.11.0.js" type="text/javascript"></script>
+    <script src="/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/javascripts/require.js" data-main="/javascripts/main.js"></script>
+  </head>
+  <body>
+    	<%- include("./header",{title:"餐饮管理系统",isShow:true,headername:name})%>
+    	<div id="main">
+    		<div class="menu">
+    			<ul>
+    			    <li id="pageone">主页面</li>
+    			<!--     <li id="pagetwo">员工信息</li> -->
+    			    <li id="pagethree">菜品信息</li>
+    			    <!-- <li id="pagefour">员工周报</li> -->
+    			</ul>
+    		</div>
+    		<div class="pageone mainpage">
+    			<div class="boxone">
+    				<ul>
+    					<li class="hide">
+    						<div class="desk"><span>1</span>号桌</div>
+    						<span class="pageone-status click">空闲</span>
+    						<span class="pageone-get click">占位</span>
+                                                            <span class="pageone-delect click">删除</span> 
+    					</li>
+    					<li class="add">
+    						<div class="tip">+</div>
+    					</li>
+    				</ul>
+    			</div>
+    			<nav aria-label="Page navigation" style="text-align:center;">
+    			  <ul class="pagination">
+    			    <li>
+    			      <a href="#" aria-label="Previous">
+    			        <span aria-hidden="true">&laquo;</span>
+    			      </a>
+    			    </li>
+    			    <li class="pageone-page"><a href="#">1</a></li>
+    			    <li class='pageone-next'>
+    			      <a href="#" aria-label="Next">
+    			        <span aria-hidden="true">&raquo;</span>
+    			      </a>
+    			    </li>
+    			  </ul>
+    			</nav>
+    		</div>
+                    <div class="pagethree mainpage hide">
+                        <div class="pagethree-title">
+                            <span class="pagethree-update"><a href="/dishs">上传菜品</a></span>
+                            <span class="pagethree-onlyself">只看我的</span>
+                            <span class="pagethree-showall">显示全部</span>
+                        </div>
+                        <div class="pagethree-dishs">
+                            <ul class="pagethree-dishlist">
+                                <li class="table-title-1 hide">
+                                    <span class="title1">菜品图片</span>
+                                    <span class="title2">菜名</span>
+                                    <span class="title3">描述</span>
+                                    <span class="title4">上传者</span>
+                                </li>
+                                <li class="table-title-2 hide">
+                                    <span class="title5">菜品图片</span>
+                                    <span class="title6">菜名</span>
+                                    <span class="title7">描述</span>
+                                    <span class="title8">操作1</span>
+                                    <span class="title9">操作2</span>
+                                </li>
+                                <li class="pagethree-all-hide hide">
+                                    <img src="/images/bg.jpg"/>
+                                    <span class="pagethree-dishname">菜名</span>
+                                    <a href="/dishdeatil?status=1">描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</a>
+                                    <span class="pagethree-updatename">上传者</span>
+                                </li>
+                                <li class="pagethree-self-hide hide">
+                                    <img src="/images/bg.jpg"/>
+                                    <span class="pagethree-dishname">菜名</span>
+                                    <a href="/dishdeatil?status=1" class="pagethree-describe">描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</a>
+                                   <a href="/dishdeatil?status=0" class="pagethree-change">修改</a>
+                                    <b class="pagethree-delect">删除</b>
+                                </li>
+                                <div class="pagethree-contain">
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+    	</div>
+  </body>
+</html>
